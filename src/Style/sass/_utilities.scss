@@ -1,0 +1,17 @@
+.linear-gradient-1{
+    background-image: linear-gradient($primary,$secondary);
+}
+
+.linear-gradient-2{
+    background-image: linear-gradient(45deg ,$purple,$half-purple 80%);
+}
+
+
+.push-left{
+    align-self: flex-start;
+}
+
+.push-right{
+    align-self: flex-end;
+}
+

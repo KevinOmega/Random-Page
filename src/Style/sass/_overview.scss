@@ -1,0 +1,45 @@
+#overview{
+    @include flex-column;
+    .info {
+        text-align: center;
+    
+        h2{
+            margin-bottom: 2rem;
+        }
+        button {
+            border-radius: 30px;
+            background: $secondary;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            padding: 1rem;
+            margin: 4rem 0;
+
+            &:hover{
+                box-shadow: 0 0 10px $gray;
+                background: $half-secondary;
+                
+            }
+        }
+    }
+}
+
+.hero{
+    margin: 4rem 0;
+    img{
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: $big-screen) {
+    #overview {
+        @include flex-row;
+        flex-direction: row-reverse;
+        padding: 5rem 0;
+        .info {
+            max-width: 15rem;
+        }
+    }
+
+   
+}

@@ -1,0 +1,56 @@
+#why{
+    @include flex-column;
+    padding: 1rem 0;
+}
+
+.why-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    margin: 2rem 0;
+
+& .card:nth-child(2){
+    
+    align-self: flex-end;
+}
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 13rem;
+        margin: 0.4rem 0;
+
+        h1,h2,h3,h4{
+            margin: 0;
+        }
+
+
+        .logo{
+            margin: 0.8rem 1rem;
+            img {
+                width: 1.5rem;
+            }
+        }
+        
+            a{
+                text-decoration: none;
+                color: $secondary;
+                &:hover{
+                    color: $primary;
+                }
+            }
+            span {
+                font-weight: $bold-fw;
+        }
+    }
+}
+
+@media  screen and (min-width : $big-screen) {
+    .why-center{
+        max-width: 30rem;
+    }
+}
+

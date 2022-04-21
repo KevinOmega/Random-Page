@@ -1,0 +1,51 @@
+#home{
+    width: 100%;
+    color: $white;
+    font-weight: $bold-fw;
+    @include flex-column;
+    
+    button{
+        background: $white;
+        color: $secondary;
+        border: none;
+        border-radius: 30px;
+        padding: 1rem;
+        font-size: 1rem;
+        margin-top: 3rem;
+
+        &:hover{
+            box-shadow: 0 0 10px $black;
+            color: $primary;
+        }
+    }
+
+    p{
+        margin-top: 2rem;
+    }
+
+    img {
+        width: 15rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.info{
+    max-width: 16rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+
+@media screen and (min-width : 800px){
+    #home{
+        @include flex-row;
+
+        .info{
+            margin: 5rem 0;
+        }
+        img{
+            width: 20rem;
+        }
+    }
+}

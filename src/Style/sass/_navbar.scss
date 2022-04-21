@@ -1,0 +1,135 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid $black;
+}
+
+
+
+.logo {
+    position: relative;
+    margin: 0.5rem 0;
+
+    h2{
+        font-size: 1.8rem;
+    }
+}
+
+.links{
+    ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 5;
+        padding: 0;
+        transform: translateX(105%);
+        transition: 1s ease ;
+        
+        li {
+            padding: 2rem 0;
+            list-style: none;
+            text-align: center;
+            &:hover{
+                background: $gray;
+            }
+            
+        
+            a {
+                text-decoration: none;
+                color: $black;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .show {
+        transform: translateX(0);
+    }
+    
+}
+
+
+
+.svg-button{
+    width: 30px;
+    height: 30px;
+    border: transparent;
+    z-index: 10;
+    background: transparent;
+    transition: 1s ease-in;
+    cursor: pointer;
+    
+
+    svg{
+        :nth-child(n){
+            transition: 1s ease;
+            transform-origin: 50% 50%;
+        }
+    }
+}
+
+.svg-X {
+    transform: translateX(1rem);
+
+    .line2{
+        stroke-width: 0;
+    }
+
+    .line1{
+        transform: rotate(225deg) translate(15px, 8px);
+    }
+
+    .line3{
+        transform:  rotate(-45deg) translate(4px,-13px);
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .links{
+        position: static;
+        height: auto;
+        width: auto;
+
+        ul{
+            position: static;
+            height: auto;
+            max-width: 40rem;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            transform: translate(0);
+            gap: 2rem;
+
+            li{
+                padding: 0.7rem;
+                a{
+                    font-size: 1rem;
+
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+                &:hover{
+                    background: transparent;
+                }
+               
+            }
+        }
+    }
+
+    .svg-button{
+       position: absolute;
+       left: 110%;
+    }
+
+   
+}
